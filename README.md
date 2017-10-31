@@ -6,15 +6,16 @@ You must identify the relation you wish to be included if you require it in the 
 ### Installation 
 
 Install the package via Composer:
-````
+
+```
 $ composer require khaled-dev/includable
-````
+```
 
 ### Usage
 
 first use the trait in model:
 
-````
+```
 namespace App;
 
 use Khaled7\Includable\Includable;
@@ -52,23 +53,23 @@ class User extends Authenticatable
         return $this->hasMany(Subscribe::class);
     }  
 }
-```` 
+```
 
 In controller:
 
-````
+```
 // Use to load all includable of all users
 User::withRequestIncludes()->get()
 
 // Use to load the includable of this instance
 $user = User::first()
 $user->loadRequestIncludes();
-````
+```
 
 In Request:
-````
+```
 localhost:8000/users?includes=posts,votes
-````
+```
  
  > In result it should help you to  only include the relations if you really need it, and usually use in APIs.
  
