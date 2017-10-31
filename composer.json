@@ -1,0 +1,29 @@
+{
+    "name": "khaled-dev/includable",
+    "description": "Help the developer to load table in relation by type the name in url",
+    "keywords": [
+        "khaled-dev",
+        "includable",
+        "includes",
+        "relations",
+        "api",
+        "with",
+        "load",
+        "laravel"
+    ],
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "khaled AbdElRahim",
+            "email": "khaled710017@gmail.com",
+            "social": "https://www.facebook.com/khaled.7dev"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Khaled7\\includable": "package/src/"
+        }
+    },
+    "require": {}
+}
