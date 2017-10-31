@@ -22,7 +22,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Khaled7\\includable": "package/src/"
+            "KhaledDev\\Includable": "package/src/"
         }
     },
     "require": {}

@@ -7,7 +7,7 @@ You must identify the relation you wish to be included if you require it in the 
 
 Install the package via Composer:
 ````
-$ composer require khaled7/includable
+$ composer require khaled-dev/includable
 ````
 
 ### Usage
@@ -17,7 +17,7 @@ first use the trait in model:
 ````
 namespace App;
 
-use Khaled7\includable\Includable;
+use Khaled7\Includable\Includable;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

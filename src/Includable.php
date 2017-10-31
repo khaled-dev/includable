@@ -1,6 +1,6 @@
 <?php
 
-namespace Khaled7\includable;
+namespace KhaledDev\Includable;
 
 
 trait Includable
