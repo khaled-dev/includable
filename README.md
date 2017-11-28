@@ -70,7 +70,29 @@ In Request:
 ```
 localhost:8000/users?includes=posts,votes
 ```
- 
+
+To show the result:
+
+````
+// The method `loaded` comes with this package to easily load the included relation  
+// Use to load the model 
+$this->loaded('posts'); 
+
+// Use to load the model to its laravel-resource
+PostResource::collection($this->loaded('posts')),
+
+
+// laravel-resource
+// Use to Load an opptional model to its resource
+PostResource::collection($this->when($this->loaded('posts'), $this->loaded('posts'))),
+
+// laravel-resource
+// Or semply you can use `WhenLoaded` laravel builtin method
+PostResource::collection($this->whenLoaded('posts'))
+````
+
+> Better to use laravel-resource
+
  > In result it should help you to  only include the relations if you really need it, and usually use in APIs.
  
 ### License

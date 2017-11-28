@@ -45,4 +45,27 @@ trait Includable
 
         return $this;
     }
+
+    /**
+     * To get the loaded relation.
+     *
+     * @param string $relation
+     * @return $this
+     */
+    public function loaded(string $relation)
+    {
+        $fields = $this->includable ?? [];
+
+        $request = request('includes');
+
+        foreach ($fields as $field) {
+            if (in_array($field, explode(',', $request))) {
+                if (strcasecmp($relation, $field) == 0) {
+                    return $this->$relation;
+                }
+            }
+        }
+
+        return null;
+    }
 }
